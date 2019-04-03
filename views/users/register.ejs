@@ -1,0 +1,71 @@
+<% include ../partials/header.ejs %>
+
+<body class="checkout">
+
+<div id="preloader"></div>
+
+<% include ../partials/sub-nav.ejs%>
+
+<section id="page-title">
+    <div class="title-image">
+
+        <img src="/images/logo1.png" alt="Logo 1">
+    </div>
+    <div class="global-title wow zoomIn">
+        <h1>Register</h1>
+    </div>
+</section>
+
+
+<section id="checkout-list">
+    <div class="section">
+        <form class="row" action="/users/register" method="post">
+            <div class="col-lg-4 col-md-6">
+                <div class="checkout-form">
+                    <h3>Sign Up Form</h3>
+                    <div class="form-group">
+                        <label for="inputFirstName">First Name *</label>
+                        <input type="text" class="form-control" name="first_name" id="inputFirstName" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputLastName">Last Name *</label>
+                        <input type="text" class="form-control" name="last_name" id="inputLastName" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputEmailAddress">Email address *</label>
+                        <input type="email" class="form-control text-lowercase" name="email" id="inputEmailAddress" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputPassword">Password *</label>
+                        <input type="password" class="form-control text-lowercase" name="password" id="inputPassword" placeholder="" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputConfirmPassword">Confirm Password *</label>
+                        <input type="password" class="form-control text-lowercase" name="confirm_password" id="inputConfirmPassword" placeholder="">
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="checkout-form">
+                    <h3>Optional Info</h3>
+                    <div class="form-group">
+                        <label for="inputLocation">Location</label>
+                        <input type="text" class="form-control" name="location" id="inputLocation" placeholder="" >
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFavouriteGenres">Favourite Genres</label>
+                        <input type="text" class="form-control" name="fav_genres" id="inputFavouriteGenres" placeholder="">
+                    </div>
+                    <div class="form-group">
+                        <label for="inputFavouriteArtists">Favourite Artists</label>
+                        <input type="text" class="form-control" name="fav_artists" id="inputFavouriteArtists" placeholder="">
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary btn-sm">Sign Up</button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,44 @@
+<% include ../partials/header.ejs %>
+
+<body class="checkout">
+
+<div id="preloader"></div>
+
+<% include ../partials/sub-nav.ejs%>
+
+<section id="page-title">
+    <div class="title-image">
+
+        <img src="/images/logo1.png" alt="Logo 1">
+    </div>
+    <div class="global-title wow zoomIn">
+        <h1>Login</h1>
+    </div>
+</section>
+
+
+<section id="checkout-list">
+    <div class="row">
+        <div class="to-login col-sm-12">
+            <div class="l-f">
+                    <div class="l-form">
+                        <form class="row">
+                            <div class="form-group col-sm-6">
+                                <label for="email">Email *</label>
+                                <input type="email" class="form-control text-lowercase" name="email" id="email" required>
+                            </div>
+                            <div class="form-group col-sm-6">
+                                <label for="inputPassword1">Password *</label>
+                                <input type="password" class="form-control text-lowercase" name="password" id="inputPassword1" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary col-sm-4 ml-3">Login</button>
+                        </form>
+                        <a href="#">Lost your password?</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+<% include ../partials/footer.ejs %>
