@@ -1,0 +1,34 @@
+<% include ../partials/header.ejs %>
+
+<body class="contact-us-page">
+
+<div id="preloader"></div>
+
+<% include ../partials/sub-nav.ejs%>
+
+<section id="page-title">
+    <div class="title-image">
+
+        <img src="/images/logo1.png" alt="Logo 1">
+    </div>
+    <div class="global-title wow zoomIn">
+        <h1>Edit Genres</h1>
+    </div>
+</section>
+
+<section id="contact-us" class="section_8" style="background-image: url(https://source.unsplash.com/1600x900/?genre)">
+    <div class="overly"></div>
+    <div class="section">
+        <div class="col-md-6">
+            <form action="/genres/edit/<%=id%>" method="post">
+                <div class="form-group">
+                    <label for="name" class="text-white">Name:</label>
+                    <input type="text" name="name" id="name" class="form-control" value="<%=genre.name%>">
+                </div>
+                <button type="submit" class="btn btn-secondary">Save Changes</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<% include ../partials/footer.ejs %>

@@ -1,0 +1,98 @@
+<% include ../partials/header.ejs %>
+
+<body class="blog-single-post">
+
+<div id="preloader"></div>
+
+<% include ../partials/sub-nav.ejs%>
+
+<section id="page-title">
+    <div class="title-image">
+
+        <img src="/images/logo1.png" alt="Logo 1">
+    </div>
+    <div class="global-title wow zoomIn">
+        <h1>Album</h1>
+    </div>
+</section>
+
+
+<section id="blog-post">
+    <div class="section">
+        <div class="row blog-content">
+            <div class="col-sm-9 post-content">
+                <div class="featured-image">
+                    <div class="featured-overly"></div>
+                    <img src="/images/uploads/<%=album.cover%>" alt="">
+                </div>
+                <div class="post-text">
+                    <div class="post-heading">
+                        <h2>YOU ARE WHAT YOU LISTEN TO</h2>
+                        <div class="post-by">
+                            <span><%=album.title%></span>
+                            <span> By <a href="#" class="categories-name"><%=album.artist%></a></span>
+                        </div>
+                    </div>
+                    <p><%=album.info%></p>
+                    <p class="post-quote">
+                        Exercitation photo booths stumptowns totes bag Banksy,
+                        elit small batch bit kale chips proident chillwave have a great work deep haves laborum.
+                        Exercitation photo booths stumptowns totes bag Banksy,
+                        elit small batch bit kale chips proident chillwave have a great work.
+                    </p>
+                    <p>
+                        Proins gravida nibh vel velit auctor aliquet.
+                        Aenean sollicitudin, lorem quis bibendum auctor,
+                        nisi elit consequat ipsum, nec sagitgitis sem nibh id elit.
+                        Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.
+                        Morbi accumsan ipsum velit. Nam nec terzllus a odio tincidunt
+                        auctor a ornare odio. Sed non mauris vitae erat consequat
+                        auctor eu in elit. Class aptent taciti Duis aute irure dolor
+                        in reprehenderit in voluptate velit. Qui officia deserunt
+                        mollit anim id est labosasirum. Corrupti quosalores et
+                        quas molestias excepturi sint occaecati. Facere possimus,
+                        omnis voluptas assumenda have esOmnis dolor repellendus.
+                        Ut aut reiciendis voluptatibus maiores alias consequatur
+                        aut perferendis.Et harum quidem the odio dignissimos
+                        ducimus qui blanditiis praesentium voluptatum deleniti
+                        atque.sociosqu ad litora torquent per conubia nostra.
+                    </p>
+                </div>
+                <div class="post-share">
+                    <span>SHARE :</span>
+                    <a href="#"><i class="fab fa-spotify" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-pinterest" aria-hidden="true"></i></a>
+                    <a href="/albums/edit/<%=id%>"><i class="fas fa-cog"></i></a>
+                    <a href="#" data-id="<%=id%>" class="delete-album"><i class="fas fa-trash"></i></a>
+                </div>
+            </div>
+            <div class="col-sm-3 sitebar">
+                <div class="blog-categories">
+                    <h2>Overview</h2>
+                    <div class="p-categories">
+                        <a href="#" class="categories-line">
+                            <span class="c-name">Release Date:</span>
+                            <span class="c-count"><%=album.year%></span>
+                        </a>
+                        <a href="#" class="categories-line">
+                            <span class="c-name">Label</span>
+                            <span class="c-count"><%=album.label%></span>
+                        </a>
+                        <a href="#" class="categories-line">
+                            <span class="c-name">Genre</span>
+                            <span class="c-count"><%=album.genre%></span>
+                        </a>
+                        <a href="#" class="categories-line">
+                            <span class="c-name">Number of Tracks</span>
+                            <span class="c-count"><%=album.tracks%></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<% include ../partials/footer.ejs %>

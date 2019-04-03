@@ -1,0 +1,66 @@
+<% include ../partials/header.ejs %>
+
+<body class="contact-us-page">
+
+<div id="preloader"></div>
+
+<% include ../partials/sub-nav.ejs%>
+
+<section id="page-title">
+    <div class="title-image">
+
+        <img src="/images/logo1.png" alt="Logo 1">
+    </div>
+    <div class="global-title wow zoomIn">
+        <h1>Add Albums</h1>
+    </div>
+</section>
+
+<section id="contact-us" class="section_8" style="background-image: url(https://source.unsplash.com/1600x900/?albums)">
+    <div class="overly"></div>
+    <div class="section">
+        <div class="col-md-6">
+            <form action="/albums/add" method="post" enctype="multipart/form-data">
+                <div class="form-group">
+                    <label for="artist" class="text-white">Artist:</label>
+                    <input type="text" name="artist" id="artist" class="form-control" placeholder="Artist Name">
+                </div>
+                <div class="form-group">
+                    <label for="title" class="text-white">Album Title:</label>
+                    <input type="text" name="title" id="title" class="form-control" placeholder="Album Title">
+                </div>
+                <div class="form-group">
+                    <label for="genre" class="text-white">Genre:</label>
+                    <select name="genre" id="genre" class="form-control">
+                        <% for (var i=0; i<genres.length; i++){%>
+                            <option value="<%=genres[i].name%>"><%=genres[i].name%></option>
+                        <%}%>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="info" class="text-white">Album Info:</label>
+                    <textarea name="info" id="info" cols="6" rows="6" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="year" class="text-white">Release Date:</label>
+                    <input type="text" name="year" id="year" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="label" class="text-white">Record Label:</label>
+                    <input type="text" name="label" id="label" class="form-control" placeholder="Record Label">
+                </div>
+                <div class="form-group">
+                    <label for="tracks" class="text-white">Number of Tracks:</label>
+                    <input type="number" name="tracks" id="tracks" class="form-control">
+                </div>
+                <div class="custom-file mt-2 mb-2">
+                    <input type="file" class="custom-file-input" id="cover" name="cover">
+                    <label class="custom-file-label" for="cover">Choose Album Cover</label>
+                </div>
+                <button type="submit" class="btn btn-outline-secondary">Add Album</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<% include ../partials/footer.ejs %>

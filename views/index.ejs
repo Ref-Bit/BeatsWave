@@ -1,0 +1,259 @@
+<% include partials/header.ejs %>
+
+<body class="home">
+
+<div id="preloader"></div>
+
+<% include partials/nav.ejs %>
+
+<section id="album-release" class="section_2">
+  <div class="section_bg_image" style="background-image: url(https://source.unsplash.com/1600x900/?music,album)"></div>
+  <div class="section">
+
+    <div class="title">
+      <div class="">
+        <h1>New Album</h1>
+        <p>Name Company</p>
+      </div>
+    </div>
+
+    <div class="row j_c">
+      <div class="col sec_2_content wow fadeInLeftBig">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+          labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+          laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+          voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+        </p>
+        <p> Excepteur sint occaecat cupidatat non proident,
+          sunt in culpa qui officia deserunt mollit anim id est laborum.
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium doloremque laudantium, totam rem aperiam.
+        </p>
+        <div class="cta">
+          <a href="#">BUY ALBUM FROM iTUNES</a>
+        </div>
+      </div>
+      <div class="col music wow fadeInRightBig">
+        <div class="m_img" style="background-image: url(/images/music-bg.png)"></div>
+        <div class="mp3 mp3_1">
+          <span>1.Bruno Mars - That's What I Like</span>
+          <audio controls class="audio1"><source src="/sounds/Bruno_Mars-That_s_What_I_Like.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="mp3 mp3_2">
+          <span>2.Cardi - I Like It</span>
+          <audio controls class="audio1"><source src="/sounds/Cardi-I_Like_It.mp3" type="audio/mpeg"></audio>
+        </div>
+        <div class="mp3 mp3_3">
+          <span>3.Nicky Jam feat J.Balvin - X EQUIS</span>
+          <audio controls class="audio1"><source src="/sounds/Nicky_Jam_feat_J_Balvin-X_EQUIS.mp3" type="audio/mpeg"></audio>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="gallery" class="section_4">
+
+  <div class="title">
+    <div class="">
+      <h1>Gallery</h1>
+      <p>New Design Trend</p>
+    </div>
+  </div>
+  <div id="image-gallery" class="row img_gallery">
+    <div class="col-8 banner_1">
+      <div class="row">
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-1.jpg" alt="Galler Image 1"></a>
+        </div>
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-2.jpg" alt="Galler Image 2"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-4.jpg" alt="Galler Image 3"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border" data-toggle="modal"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-6.png" alt="Galler Image 4"></a>
+        </div>
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border" data-toggle="modal"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-7.png" alt="Galler Image 5"></a>
+        </div>
+      </div>
+    </div>
+    <div class="col-4 banner_2">
+      <div class="row">
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-3.png" alt="Galler Image 6"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-5.png" alt="Galler Image 7"></a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <a href="javascript:void(0)" class="anim_border"></a>
+          <a href="" class="img_link"><img src="/images/galery-image-8.jpg" alt="Galler Image 8"></a>
+        </div>
+      </div>
+    </div>
+    <div id="popup-container">
+      <div class="popup_block" id="popup_block">
+        <div id="slides-container"></div>
+        <div class="popup_left popup_arrow">
+          <i class="fas fa-long-arrow-alt-left"></i>
+        </div>
+        <div class="popup_right popup_arrow">
+          <i class="fas fa-long-arrow-alt-right"></i>
+        </div>
+      </div>
+      <ul></ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col cta">
+      <a href="08-Gallery-Photogallery.html">More images</a>
+    </div>
+  </div>
+</section>
+
+
+<section id="video" class="section_5">
+  <div class="section">
+
+    <div class="title">
+      <div class="">
+        <h1>Video</h1>
+        <p>Featured</p>
+      </div>
+    </div>
+    <div class="embed-responsive embed-responsive-16by9">
+      <iframe class="embed-responsive-item" width="560" height="315" src="https://www.youtube.com/embed/NqGQIO2m3YQ" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+    </div>
+  </div>
+</section>
+
+
+<section id="testimonials" class="section_7">
+  <div class="section">
+
+    <div class="title">
+      <div class="">
+        <h1>Testimonials</h1>
+        <p>Customers</p>
+      </div>
+    </div>
+    <div class="testimonial-container">
+      <div class="dk-container">
+        <div class="cd-testimonials-wrapper cd-container">
+          <ul class="cd-testimonials">
+            <li>
+              <div class="testimonial-content">
+                <div class="d-none d-md-block">
+                  <a href="" class="slide_img">
+                    <img src="/images/client-1.jpg" alt="jamakassi">
+                  </a>
+                  <div class="carousel_content">
+                    <p>
+                      <i class="fas fa-quote-left"></i>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure
+                      <i class="fas fa-quote-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="testimonial-content">
+                <div class="d-none d-md-block">
+                  <a href="" class="slide_img">
+                    <img src="/images/client-2.jpg" alt="No pic">
+                  </a>
+                  <div class="carousel_content">
+                    <p>
+                      <i class="fas fa-quote-left"></i>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      <i class="fas fa-quote-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li>
+              <div class="testimonial-content">
+                <div class="d-none d-md-block">
+                  <a href="" class="slide_img">
+                    <img src="/images/client-3.jpg" alt="jamakassi">
+                  </a>
+                  <div class="carousel_content">
+                    <p>
+                      <i class="fas fa-quote-left"></i>
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                      laboris nisi ut aliquip ex ea commodo consequat.
+                      <i class="fas fa-quote-right"></i>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="contact-us" class="section_8" style="background-image: url(https://source.unsplash.com/1600x900/?music,song)">
+  <div class="overly"></div>
+  <div class="section">
+
+    <div class="title">
+      <div class="">
+        <h1>Contact Us</h1>
+        <p>Get in Touch</p>
+      </div>
+    </div>
+    <div class="form">
+      <form>
+        <div class="row fild_1">
+          <div class="col-sm-6">
+            <input type="text" class="form-control" placeholder="Full name">
+          </div>
+          <div class="col-sm-6">
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+        </div>
+        <div class="form-group">
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Message"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">SEND MESSAGE</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<% include partials/footer.ejs %>
+

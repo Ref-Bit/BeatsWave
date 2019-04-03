@@ -1,0 +1,41 @@
+<% include ../partials/header.ejs %>
+
+<body class="contact-us-page">
+
+<div id="preloader"></div>
+
+<% include ../partials/sub-nav.ejs%>
+
+<section id="page-title">
+    <div class="title-image">
+
+        <img src="/images/logo1.png" alt="Logo 1">
+    </div>
+    <div class="global-title wow zoomIn">
+        <h1>DISCOGRAPHY</h1>
+    </div>
+</section>
+
+
+<section id="discography">
+    <div class="section">
+        <div class="row">
+            <%albums.forEach(function (album) {%>
+                <div class="w-100 col-md-4 music-banner">
+                    <div class="w-100">
+                        <img class="music-banner-image" src="/images/uploads/<%=album.cover%>" alt="">
+                        <div class="music-banner-text">
+                            <div class="dis-name">
+                                <h4><%=album.title%></h4>
+                                <p class="font-italic"><%=album.artist%></p>
+                            </div>
+                        </div>
+                        <a href="/albums/<%=album.id%>/details" class="music-banner-link"></a>
+                    </div>
+                </div>
+            <%});%>
+            </div>
+        </div>
+</section>
+
+<% include ../partials/footer.ejs %>

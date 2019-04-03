@@ -1,0 +1,56 @@
+<% include ../partials/header.ejs %>
+
+<body class="contact-us-page">
+
+<div id="preloader"></div>
+
+<% include ../partials/sub-nav.ejs%>
+
+<section id="page-title">
+    <div class="title-image">
+
+        <img src="/images/logo1.png" alt="Logo 1">
+    </div>
+    <div class="global-title wow zoomIn">
+        <h1>Your Genres</h1>
+    </div>
+</section>
+
+<section id="contact-us" class="section_8" style="background-image: url(https://source.unsplash.com/1600x900/?genre)">
+    <div class="overly"></div>
+    <div class="section">
+        <div class="contact-info">
+            <h2>The genres you belong to</h2>
+            <div class="row mt-2">
+                <table class="table table-dark">
+                    <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Genre Name</th>
+                        <th scope="col"></th>
+                        <th scope="col"></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <%genres.forEach(function (genre, i) {%>
+                    <%i++;%>
+                        <tr>
+                            <td><%=i%></td>
+                            <td><%=genre.name%></td>
+                            <td>
+                                <a href="/genres/edit/<%=genre.id%>" class="btn btn-info btn-sm"><i class="far fa-edit"></i></a>
+                            </td>
+                            <td>
+                                <button type="button" data-id="<%=genre.id%>" class="btn btn-danger btn-sm delete-genre"><i class="far fa-trash-alt"></i></button>
+                            </td>
+                        </tr>
+                    <%});%>
+                    </tbody>
+                </table>
+                <a href="/genres/add" class="btn btn-outline-secondary mt-2">Add Genre</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<% include ../partials/footer.ejs %>
