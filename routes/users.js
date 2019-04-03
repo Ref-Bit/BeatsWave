@@ -1,6 +1,16 @@
 var express = require('express');
 var router = express.Router();
 var admin = require("firebase-admin");
+var firebase = require('firebase');
+// Initialize Firebase
+var config = {
+  apiKey: "AIzaSyBrVv_E4ICOuB_iHo3HWBc_BV35Bas8HyA",
+  authDomain: "beatswave-85fcc.firebaseapp.com",
+  databaseURL: "https://beatswave-85fcc.firebaseio.com",
+  storageBucket: "gs://beatswave-85fcc.appspot.com",
+};
+firebase.initializeApp(config);
+
 var db = admin.database();
 var auth = admin.auth();
 var ref = db.ref("/");
@@ -86,8 +96,8 @@ router.post('/login', function(req, res, next) {
       errors: errors
     });
   }else {
-    auth.signInWithEmailAndPassword(email, password).then(function (authData) {
-      console.log('Authenticated user with: ', authData);
+    firebase.auth().signInWithEmailAndPassword(email, password).then(function (authData) {
+      console.log('Authenticated user with email: ', authData.email);
 
       req.flash('success_msg', 'You are now logged in.');
       res.redirect('/albums');
@@ -98,6 +108,21 @@ router.post('/login', function(req, res, next) {
       res.redirect('/users/login');
     });
   }
+});
+
+/* GET Logout User. */
+router.get('/logout', function(req, res, next) {
+  firebase.auth().signOut().then(function() {
+    // Sign-out successful.
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/');
+  }).catch(function(error) {
+    // An error happened.
+    console.log(error);
+
+    req.flash('error_msg', 'Logging out Failed');
+    res.redirect('/');
+  });
 });
 
 module.exports = router;
