@@ -97,12 +97,18 @@ router.post('/login', function(req, res, next) {
     });
   }else {
     firebase.auth().signInWithEmailAndPassword(email, password).then(function (authData) {
-      console.log('Authenticated user with email: ', authData.email);
-
+     console.log('Authenticated user with:', authData);
+      // firebase.auth().onAuthStateChanged(function(user) {
+      //   if (user) {
+      //     console.log(user.email + " is signed in");
+      //   }else{
+      //     console.log(user.email + " has logged out");
+      //   }
+      // });
       req.flash('success_msg', 'You are now logged in.');
       res.redirect('/albums');
     }).catch(function (error) {
-      console.log('Login Failed due to ', error);
+      console.log('Login Failed due to', error);
 
       req.flash('error_msg', 'Login Failed.');
       res.redirect('/users/login');

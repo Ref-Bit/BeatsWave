@@ -14,6 +14,16 @@ admin.initializeApp({
   databaseURL: "https://beatswave-85fcc.firebaseio.com"
 });
 
+// var firebase = require('firebase');
+// // Initialize Firebase
+// var otherConfig = {
+//   apiKey: "AIzaSyBrVv_E4ICOuB_iHo3HWBc_BV35Bas8HyA",
+//   authDomain: "beatswave-85fcc.firebaseapp.com",
+//   databaseURL: "https://beatswave-85fcc.firebaseio.com",
+//   storageBucket: "gs://beatswave-85fcc.appspot.com",
+// };
+// firebase.initializeApp(otherConfig, "otherFirebase");
+
 var index = require('./routes/index');
 var albums = require('./routes/albums');
 var genres = require('./routes/genres');
@@ -67,10 +77,16 @@ app.use(function (req, res, next) {
   res.locals.error = req.flash('error');
   next();
 });
+
 app.use('/', index);
 app.use('/albums', albums);
 app.use('/genres', genres);
 app.use('/users', users);
+
+/* GET 404 page. */
+app.get('*', function (req, res) {
+  res.render('404', { title: 'BeatsWave - 404' });
+});
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
